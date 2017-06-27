@@ -14,7 +14,7 @@ export class HeroService {
         return this.http.get(this.heroesUrl)
             .toPromise()
             .then(response => {
-                response.json() as Array<Hero>
+                return response.json() as Array<Hero>
             })
             .catch(this.handleError);        
     }

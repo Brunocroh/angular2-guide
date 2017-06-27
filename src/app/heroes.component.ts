@@ -29,7 +29,6 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(): void{
     let retorno = this.heroService.getHeroes()
-    console.log(retorno);
     retorno.then(heroes => this.heroes = heroes);
   }
   
